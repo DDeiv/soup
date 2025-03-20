@@ -16,14 +16,14 @@ section{
 p{
     margin: 0;
     padding: 0;
-    position: relative; /* Added to position the glyph relative to the text */
+    position: relative; 
 }
 
 .anima{
     width: 28.09%;
     display: flex;
     flex-wrap: nowrap;
-    animation: move 1.5s infinite linear; /* set the time to what you want of course */
+    animation: move 1.5s infinite linear; 
 }
 @keyframes move {
     to {
@@ -50,13 +50,12 @@ p{
 .banner-image {
     width: 100%;
     height: 10%; 
-    object-fit: cover; /* Changed from scale-down to cover */
+    object-fit: cover; 
 }
 .spacebetween{
     justify-content: space-between;
 }
 
-/* New hover effect styles */
 .event-name {
     display: inline-block;
     position: relative;
@@ -64,13 +63,13 @@ p{
 
 .event-name::after {
     content: '';
-    background-image: url('glyph.png'); /* Replace with your glyph image */
+    background-image: url('glyph.png'); 
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    width: 70px; /* Adjust size as needed */
-    height: 70px; /* Adjust size as needed */
-    right: -80px; /* Position it right after the text */
+    width: 70px; 
+    height: 70px; 
+    right: -80px; 
     margin-top: 4px;
     top: 50%;
     transform: translateY(-50%);
@@ -93,21 +92,20 @@ p:hover{
     font-style: normal;
 }
 
-/* Media query for screens 1500px and below */
 @media screen and (max-width: 1500px) {
     body {
-        font-size: 70px; /* Reduced font size */
+        font-size: 70px; 
     }
     
     .banner-image {
         width: 100%;
-        height: auto; /* Auto height to maintain aspect ratio */
-        object-fit: cover; /* Ensures the image covers the area */
+        height: auto; 
+        object-fit: cover; 
         margin-bottom: 7px;
     }
     
     .event-name::after {
-        width: 50px; /* Smaller glyph */
+        width: 50px; 
         height: 50px;
         right: -60px;
     }
@@ -115,42 +113,39 @@ p:hover{
     .flexhs{
         margin-top: -5px;
 }
-
-/* Media query for screens 1000px and below */
 @media screen and (max-width: 1000px) {
     body {
-        font-size: 100px; /* Further reduced font size */
+        font-size: 100px;
     }
     
     .banner-image {
         margin-bottom: 0px;
     }
-    /* Hide date information */
+    
     .flexhs p:nth-child(2) {
         display: none;
     }
     
-    /* Allow event names to take full width */
     .flexhs {
-        justify-content: flex-start; /* Align to the left instead of space-between */
+        justify-content: flex-start; 
     }
     
     .event-name {
-        width: 100%; /* Allow text to use full width */
-        white-space: nowrap; /* Prevent text from wrapping */
-        overflow: hidden; /* Hide overflow */
-        text-overflow: ellipsis; /* Add ellipsis for very long text */
+        width: 100%; 
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis; 
     }
     
     .event-name::after {
-        width: 40px; /* Even smaller glyph */
+        width: 40px; 
         height: 40px;
         right: -50px;
     }
     
     /* Adjust spacing */
     .flexhs {
-        margin-top: -30px; /* Slightly reduced negative margin */
+        margin-top: -30px; 
     }
 
     @keyframes pulse {
